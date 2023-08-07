@@ -1,0 +1,42 @@
+<html>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <head>
+    <title>MATA65 - Computação Gráfica</title>
+  </head>
+
+  <script id="base-vs" type="x-shader/x-vertex">
+
+    varying vec2 vUv;
+    void main(void) {
+    	vUv = uv;
+    	gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+    }
+  </script>
+
+  <script id="grayScale-fs" type="x-shader/x-fragment">
+    precision mediump float;
+
+    uniform sampler2D 	uSampler;
+
+    varying vec2 		vUv;
+
+    void main(void) {
+    	vec4 color = texture2D(uSampler, vUv);
+
+    	gl_FragColor = color;
+
+    }
+  </script>
+
+  <script type="module" src="parte2.js"></script>
+
+  <body>
+    <h1>MATA65 - Computação Gráfica</h1>
+    <h2>Parte 2 da Atividade 2</h2>
+    <br />
+    <a href="index.html">Página Principal</a><br />
+    <video id="video" style="display: none" autoplay playsinline></video>
+    <div id="WebGL-output"></div>
+    <br />
+  </body>
+</html>
