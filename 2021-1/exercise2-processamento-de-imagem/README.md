@@ -1,5 +1,3 @@
-[![Work in Repl.it](https://classroom.github.com/assets/work-in-replit-14baed9a392b3a25080506f3b7b6d57f295ec2978f6f33ec97e36a161684cbe9.svg)](https://classroom.github.com/online_ide?assignment_repo_id=4502135&assignment_repo_type=AssignmentRepo)
-
 # Atividade 2 - Processamento de Imagens usando Three.JS
 
 Conforme vimos nas aulas de Imagens Digitais, são diversas as transformações que permitem processar os pixels de uma imagem. Nessa atividade vamos tentar aplicar os conceitos de de processamento de imagens para gerar efeitos em uma sequencia de imagens: o _streaming_ de vídeo produzido por uma _webcam_.

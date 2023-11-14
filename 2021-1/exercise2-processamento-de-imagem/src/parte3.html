@@ -1,0 +1,74 @@
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../../../resources/icons/icon.png"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../../../resources/css/CG-Classes.css"
+    />
+  </head>
+
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "../../../resources/scripts/three.js/build/three.module.js"
+      }
+    }
+  </script>
+
+  <script id="base-vs" type="x-shader/x-vertex">
+
+    varying vec2 vUv;
+    void main(void) {
+    	vUv = uv;
+    	gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+    }
+  </script>
+
+  <script id="grayScale-fs" type="x-shader/x-fragment">
+    precision mediump float;
+
+    uniform sampler2D tDiffuse;
+    uniform vec2 		uPixelSize;
+
+    varying vec2 vUv;
+
+    mat3	kernel;
+
+    void main() {
+
+    	vec4 color1 = (	-0.4 * texture2D(tDiffuse, vUv) );
+
+    	vec2 p = vUv - 0.5;
+    	float r = length(p);
+    	float a = atan(p.y, p.x);
+    	float t = 2. * 3.1416 ;
+    	a = mod(a, t);
+    	a = abs(a - t/2.) ;
+    	p = r * vec2(cos(a), sin(a));
+
+    	vec3 c;
+    	vec4 color = texture2D(tDiffuse, p + 0.5);
+    	c = color1.rgb * color1.a + color.rgb * color.a * (-0.5* color1.a);
+
+      		gl_FragColor= vec4(vec3(c), 1.0);
+    }
+  </script>
+
+  <script type="module" src="parte3.js"></script>
+
+  <body>
+    <h3 id="output-text">Parte 3</h3>
+    <video id="video" style="display: none" autoplay playsinline></video>
+    <div id="threejs-canvas"></div>
+  </body>
+</html>

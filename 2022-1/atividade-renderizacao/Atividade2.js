@@ -1,9 +1,9 @@
 // Controle de camera com GUI.
 
 import * as THREE from "three";
-import { OrbitControls } from "../Lab00-Assets/Assets/scripts/three.js/examples/jsm/controls/OrbitControls.js";
-import { GLTFLoader } from "../Lab00-Assets/Assets/scripts/three.js/examples/jsm/loaders/GLTFLoader.js";
-import { OBJLoader } from "../Lab00-Assets/Assets/scripts/three.js/examples/jsm/loaders/OBJLoader.js";
+import { OrbitControls } from "../../resources/scripts/three.js/examples/jsm/controls/OrbitControls.js";
+import { GLTFLoader } from "../../resources/scripts/three.js/examples/jsm/loaders/GLTFLoader.js";
+import { OBJLoader } from "../../resources/scripts/three.js/examples/jsm/loaders/OBJLoader.js";
 
 var scene, renderer, camera, camControl;
 
@@ -48,7 +48,7 @@ function main() {
   loadTextures();
 
   var texture = new THREE.TextureLoader().load(
-    "../Lab00-Assets/Assets/Textures/grass.jpg",
+    "../../resources/textures/grass.jpg",
     carregaTerreno
   );
 
@@ -74,7 +74,7 @@ function onProgress(xhr) {
 
 function buildScene() {
   var loader = new OBJLoader();
-  loader.setPath("../Lab00-Assets/Assets/Models/OBJ/");
+  loader.setPath("../../resources/models/OBJ/");
   loader.load(
     "happy-buddha.obj",
 
@@ -129,7 +129,7 @@ function buildScene() {
 
   var objGLTF = new GLTFLoader();
 
-  objGLTF.setPath("../Lab00-Assets/Assets/Models/Building/");
+  objGLTF.setPath("../../resources/models/Building/");
   objGLTF.load(
     "scene.gltf",
     function (gltf) {
@@ -156,7 +156,7 @@ function buildScene() {
 
 function loadTextures() {
   // cria Mapeamento de Ambiente
-  const path = "../Lab00-Assets/Assets/Textures/Cubemaps/skyboxsun25deg/";
+  const path = "../../resources/textures/Cubemaps/skyboxsun25deg/";
   const textCubeMap = [
     path + "px.jpg",
     path + "nx.jpg",
@@ -193,7 +193,7 @@ function carregaTerreno(texture) {
   });
 
   var plane = new THREE.Mesh(
-    new THREE.PlaneBufferGeometry(50.0, 50.0, 50, 50),
+    new THREE.PlaneGeometry(50.0, 50.0, 50, 50),
     matShader
   );
   plane.rotateX((-90.0 * Math.PI) / 180.0);

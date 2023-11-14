@@ -1,4 +1,3 @@
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-c66648af7eb3fe8bc4f294546bfd86ef473780cde1dea487d3c4ff354943c9ae.svg)](https://classroom.github.com/online_ide?assignment_repo_id=7985108&assignment_repo_type=AssignmentRepo)
 # Atividade 02 - Renderização
 
 ## O Objetivo:
@@ -15,35 +14,34 @@ No entanto, a integração de outros objetos a essas edificações deve ser feit
 
 Voce deve criar um cenário a partir de um modelo de arquitetura (um prédio, uma fachada, um cômodo) a sua escolha.
 
-Dentro desse cenário voce deve colocar pelo menos dois objetos 3D utilizados em CG para analise: um gerado a partir de modelos reais (*bunny*, *dragon*, *budha* ou *Armadillo*) e outro um modelo sintético (*teapot*, *suzzane* ou *mitsuba-sphere*), todos disponíveis no diretório *Assets/Models/OBJ*). 
+Dentro desse cenário voce deve colocar pelo menos dois objetos 3D utilizados em CG para analise: um gerado a partir de modelos reais (_bunny_, _dragon_, _budha_ ou _Armadillo_) e outro um modelo sintético (_teapot_, _suzzane_ ou _mitsuba-sphere_), todos disponíveis no diretório _Assets/Models/OBJ_).
 
 Uma vez montado o cenário voce deve configurar o material dos objetos acrescentados no cenário. O material deve ser escolhido de tal sorte que torne o objeto mais integrado possível ao cenário. Para os modelos sintéticos voce deve utilizar técnicas de mapeamento para torna-los mais interessantes.
 
 Da mesma forma fontes de luz e sombras devem ser criadas para tornar o cenário o mais integrado possível.
 
-Geralmente os modelos de arquitetura (fechados ou abertos) não possuem um modelo do ambiente no qual estão localizados. Providencie uma simulação para esse ambiente externo do cenário. 
+Geralmente os modelos de arquitetura (fechados ou abertos) não possuem um modelo do ambiente no qual estão localizados. Providencie uma simulação para esse ambiente externo do cenário.
 
 ## A Avaliação:
 
 Sua atividade será pontuada levando em conta os seguintes critérios:
 
-| Critério | Pontuação |
-| :--- | :---: |
-| 1. Carregamento adequado dos modelos e sua integração como cenário | 1,5 |
-| 2. Escolha, configuração e aplicação adequada dos materiais nos objetos do cenário | 2,0 | 
-| 3. Uso de técnicas de mapeamento no material dos objetos sintéticos | 2,0 |
-| 4. Configuração das fontes de luz | 1,5 |
-| 5. Aplicação de sombras | 1,5 |
-| 6. Mapeamento do ambiente externo | 1,5 |
+| Critério                                                                           | Pontuação |
+| :--------------------------------------------------------------------------------- | :-------: |
+| 1. Carregamento adequado dos modelos e sua integração como cenário                 |    1,5    |
+| 2. Escolha, configuração e aplicação adequada dos materiais nos objetos do cenário |    2,0    |
+| 3. Uso de técnicas de mapeamento no material dos objetos sintéticos                |    2,0    |
+| 4. Configuração das fontes de luz                                                  |    1,5    |
+| 5. Aplicação de sombras                                                            |    1,5    |
+| 6. Mapeamento do ambiente externo                                                  |    1,5    |
 
+**Pontos Extras**: Caso voce use sua criatividade e os recursos do _Three.JS_ para acrescentar alguma componente que melhore o cenário voce pode ganhar até 2,0 pontos extras.
 
-**Pontos Extras**: Caso voce use sua criatividade e os recursos do *Three.JS* para acrescentar alguma componente que melhore o cenário voce pode ganhar até 2,0 pontos extras. 
-
-## Penalidades:              
+## Penalidades:
 
 > Será aplicada a penalização de -1,0 pto por dia de atraso (verificado via data da ultima submissão no repositório)
-> 
->> **Em casos de plágio (total ou parcial) todos os envolvidos terão suas avaliações zeradas**. 
+>
+> > **Em casos de plágio (total ou parcial) todos os envolvidos terão suas avaliações zeradas**.
 
 ## Referências:
 
@@ -51,14 +49,11 @@ Sua atividade será pontuada levando em conta os seguintes critérios:
 
 [2] Peter SHIRLEY, Michael ASHIKHMIN, Steve MARSCHNER. **Fundamentals of Computer Graphics**. AK Peters/CRC Press, 5th Edition, 2021.
 
-[3] John F. Hughes, Andries van Dam, Morgan McGuire, David F. Sklar, James D. Foley, Steven K. Feiner. **Computer Graphics : Principles and 
+[3] John F. Hughes, Andries van Dam, Morgan McGuire, David F. Sklar, James D. Foley, Steven K. Feiner. **Computer Graphics : Principles and
 Practice Third Edition in C**. Addison-Weslley. 2013.
 
-[4] DIRKSEN, Jos. **Learn Three. js: Programming 3D animations and visualizations for the web with HTML5 and WebGL**. Packt Publishing Ltd, 2018. (https://www.packtpub.com/product/learn-three-js-third-edition/9781788833288) 
+[4] DIRKSEN, Jos. **Learn Three. js: Programming 3D animations and visualizations for the web with HTML5 and WebGL**. Packt Publishing Ltd, 2018. (https://www.packtpub.com/product/learn-three-js-third-edition/9781788833288)
 
 [5] Three.JS - Manua, https://threejs.org/docs/index.html#manual
 
 [6] Three.JS Fundamentals, https://threejs.org/manual/#en/fundamentalshttps://threejs.org/manual/#en/fundamentals
-
-
-

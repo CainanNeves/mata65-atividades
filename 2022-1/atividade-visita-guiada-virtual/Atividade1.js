@@ -2,11 +2,11 @@
 
 import * as THREE from "three";
 import { AnimationMixer } from "three";
-import { PointerLockControls } from "../Lab00-Assets/Assets/scripts/three.js/examples/jsm/controls/PointerLockControls.js";
-import { GUI } from "../Lab00-Assets/Assets/scripts/three.js/examples/jsm/libs/lil-gui.module.min.js";
-import { GLTFLoader } from "../Lab00-Assets/Assets/scripts/three.js/examples/jsm/loaders/GLTFLoader.js";
-import { MTLLoader } from "../Lab00-Assets/Assets/scripts/three.js/examples/jsm/loaders/MTLLoader.js";
-import { OBJLoader } from "../Lab00-Assets/Assets/scripts/three.js/examples/jsm/loaders/OBJLoader.js";
+import { PointerLockControls } from "../../resources/scripts/three.js/examples/jsm/controls/PointerLockControls.js";
+import { GUI } from "../../resources/scripts/three.js/examples/jsm/libs/lil-gui.module.min.js";
+import { GLTFLoader } from "../../resources/scripts/three.js/examples/jsm/loaders/GLTFLoader.js";
+import { MTLLoader } from "../../resources/scripts/three.js/examples/jsm/loaders/MTLLoader.js";
+import { OBJLoader } from "../../resources/scripts/three.js/examples/jsm/loaders/OBJLoader.js";
 
 var scene,
   renderer,
@@ -49,7 +49,7 @@ var gui = new GUI();
 
 function main() {
   renderer = new THREE.WebGLRenderer();
-  renderer.outputEncoding = THREE.sRGBEncoding;
+  renderer.outputColorSpace = THREE.SRGBColorSpace;
   renderer.setClearColor(new THREE.Color(0.0, 0.0, 0.0));
 
   rendSize.x = window.innerWidth * 0.8;
@@ -109,7 +109,7 @@ function onProgress(xhr) {
 
 function buildScene() {
   var objMTL = new MTLLoader();
-  objMTL.setPath("../Lab00-Assets/Assets/Models/OBJ/sponza/");
+  objMTL.setPath("../../resources/models/OBJ/sponza/");
   objMTL.load("sponza.mtl", loadMaterials);
 }
 
@@ -123,7 +123,7 @@ function loadMaterials(materials) {
   var objLoader = new OBJLoader();
 
   objLoader.setMaterials(materials);
-  objLoader.setPath("../Lab00-Assets/Assets/Models/OBJ/sponza/");
+  objLoader.setPath("../../resources/models/OBJ/sponza/");
   objLoader.load("sponza.obj", loadMesh, onProgress);
 }
 
@@ -435,7 +435,7 @@ function guideLoad() {
   const loader = new GLTFLoader();
 
   loader.load(
-    "../Lab00-Assets/Assets/Models/LowPolyWolf/scene.gltf",
+    "../../resources/models/LowPolyWolf/scene.gltf",
     function (gltf) {
       const model = gltf.scene;
       model.name = "dog";
@@ -452,7 +452,7 @@ function guideLoad() {
       console.log(error);
     }
   );
-  renderer.outputEncoding = THREE.sRGBEncoding;
+  renderer.outputColorSpace = THREE.SRGBColorSpace;
 }
 
 /// ***************************************************************
